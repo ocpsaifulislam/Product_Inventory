@@ -1256,3 +1256,921 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2026-03-04 07:30:48.127 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-04 07:30:48.130 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-03-04 07:30:48.967 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 07:31:51.811 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 07:31:51.898 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 13556 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 07:31:51.899 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 07:31:51.901 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 07:31:53.145 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 07:31:53.243 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2026-03-04 07:31:53.850 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 07:31:53.867 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 07:31:53.870 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 07:31:53.870 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 07:31:53.948 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 07:31:53.949 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1963 ms
+2026-03-04 07:31:54.198 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 07:31:54.265 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 07:31:54.326 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 07:31:54.727 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 07:31:54.769 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 07:31:55.110 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 07:31:55.112 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 07:31:55.152 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 07:31:55.186 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 07:31:56.587 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 07:31:56.659 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 07:31:57.256 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 07:31:57.647 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 07:31:57.738 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 07:31:57.761 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 07:31:57.772 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 6.789 seconds (process running for 7.874)
+2026-03-04 07:32:05.313 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04 07:32:05.313 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-04 07:32:05.315 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-04 07:32:05.400 [http-nio-8080-exec-2] DEBUG com.ostad.product.controller.ProductController - Received request to fetch product with ID: 9999
+2026-03-04 07:32:05.417 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - Fetching product with ID: 9999
+2026-03-04 07:32:05.524 [http-nio-8080-exec-2] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 9999
+2026-03-04 07:32:05.538 [http-nio-8080-exec-2] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 9999
+2026-03-04 07:32:14.662 [http-nio-8080-exec-3] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Product, description=null, sku=INVALID, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:32:14.663 [http-nio-8080-exec-3] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Product, description=null, sku=INVALID, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:32:14.664 [http-nio-8080-exec-3] WARN  com.ostad.product.service.ProductService - Invalid SKU format detected: 'INVALID'
+2026-03-04 07:32:14.666 [http-nio-8080-exec-3] ERROR c.ostad.product.exception.GlobalExceptionHandler - Invalid SKU format: Invalid SKU format: 'INVALID'. SKU must start with 'SKU-' followed by 8 alphanumeric characters (e.g., SKU-A1B2C3D4).
+2026-03-04 07:32:24.289 [http-nio-8080-exec-5] ERROR c.ostad.product.exception.GlobalExceptionHandler - Validation failed: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ostad.product.entity.Product> com.ostad.product.controller.ProductController.createProduct(com.ostad.product.entity.Product): [Field error in object 'product' on field 'name': rejected value []; codes [NotBlank.product.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.name,name]; arguments []; default message [name]]; default message [Product name must not be blank]] 
+2026-03-04 07:32:24.290 [http-nio-8080-exec-5] ERROR c.ostad.product.exception.GlobalExceptionHandler - Validation error - Field: 'name', Rejected Value: '', Message: 'Product name must not be blank'
+2026-03-04 07:32:35.725 [http-nio-8080-exec-7] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 1
+2026-03-04 07:32:35.726 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 1
+2026-03-04 07:32:35.765 [http-nio-8080-exec-7] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 1 and SKU: SKU-A1B2C3D4
+2026-03-04 07:32:35.801 [http-nio-8080-exec-7] INFO  com.ostad.product.controller.ProductController - Successfully deleted product with ID: 1
+2026-03-04 07:32:50.328 [http-nio-8080-exec-8] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 07:32:50.328 [http-nio-8080-exec-8] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 07:32:50.447 [http-nio-8080-exec-8] INFO  com.ostad.product.service.ProductService - Retrieved 0 products
+2026-03-04 07:32:50.447 [http-nio-8080-exec-8] INFO  com.ostad.product.controller.ProductController - Returning 0 products
+2026-03-04 07:33:00.437 [http-nio-8080-exec-9] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:33:00.438 [http-nio-8080-exec-9] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:33:00.438 [http-nio-8080-exec-9] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 07:33:00.477 [http-nio-8080-exec-9] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 07:33:00.494 [http-nio-8080-exec-9] INFO  com.ostad.product.service.ProductService - Product created with ID: 2 and SKU: SKU-A1B2C3D4
+2026-03-04 07:33:00.511 [http-nio-8080-exec-9] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 2
+2026-03-04 07:33:08.240 [http-nio-8080-exec-10] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 07:33:08.240 [http-nio-8080-exec-10] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 07:33:08.245 [http-nio-8080-exec-10] INFO  com.ostad.product.service.ProductService - Retrieved 1 products
+2026-03-04 07:33:08.245 [http-nio-8080-exec-10] INFO  com.ostad.product.controller.ProductController - Returning 1 products
+2026-03-04 07:33:14.649 [http-nio-8080-exec-1] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 1
+2026-03-04 07:33:14.650 [http-nio-8080-exec-1] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 1
+2026-03-04 07:33:14.652 [http-nio-8080-exec-1] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 1 for deletion
+2026-03-04 07:33:14.653 [http-nio-8080-exec-1] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 1
+2026-03-04 07:33:31.696 [http-nio-8080-exec-2] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 2
+2026-03-04 07:33:31.697 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 2
+2026-03-04 07:33:31.702 [http-nio-8080-exec-2] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 2 and SKU: SKU-A1B2C3D4
+2026-03-04 07:33:31.707 [http-nio-8080-exec-2] INFO  com.ostad.product.controller.ProductController - Successfully deleted product with ID: 2
+2026-03-04 07:34:55.460 [http-nio-8080-exec-5] DEBUG com.ostad.product.controller.ProductController - Received request to fetch product with ID: 3
+2026-03-04 07:34:55.461 [http-nio-8080-exec-5] DEBUG com.ostad.product.service.ProductService - Fetching product with ID: 3
+2026-03-04 07:34:55.463 [http-nio-8080-exec-5] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 3
+2026-03-04 07:34:55.464 [http-nio-8080-exec-5] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 3
+2026-03-04 07:35:12.884 [http-nio-8080-exec-6] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 07:35:12.885 [http-nio-8080-exec-6] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 07:35:12.892 [http-nio-8080-exec-6] INFO  com.ostad.product.service.ProductService - Retrieved 0 products
+2026-03-04 07:35:12.892 [http-nio-8080-exec-6] INFO  com.ostad.product.controller.ProductController - Returning 0 products
+2026-03-04 07:35:20.834 [http-nio-8080-exec-7] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:35:20.835 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:35:20.836 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 07:35:20.840 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 07:35:20.841 [http-nio-8080-exec-7] INFO  com.ostad.product.service.ProductService - Product created with ID: 3 and SKU: SKU-A1B2C3D4
+2026-03-04 07:35:20.845 [http-nio-8080-exec-7] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 3
+2026-03-04 07:35:25.566 [http-nio-8080-exec-8] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 07:35:25.566 [http-nio-8080-exec-8] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 07:35:25.572 [http-nio-8080-exec-8] INFO  com.ostad.product.service.ProductService - Retrieved 1 products
+2026-03-04 07:35:25.572 [http-nio-8080-exec-8] INFO  com.ostad.product.controller.ProductController - Returning 1 products
+2026-03-04 07:35:40.830 [http-nio-8080-exec-9] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 2
+2026-03-04 07:35:40.831 [http-nio-8080-exec-9] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 2
+2026-03-04 07:35:40.835 [http-nio-8080-exec-9] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 2 for deletion
+2026-03-04 07:35:40.836 [http-nio-8080-exec-9] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 2
+2026-03-04 07:35:47.790 [http-nio-8080-exec-10] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 1
+2026-03-04 07:35:47.791 [http-nio-8080-exec-10] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 1
+2026-03-04 07:35:47.795 [http-nio-8080-exec-10] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 1 for deletion
+2026-03-04 07:35:47.796 [http-nio-8080-exec-10] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 1
+2026-03-04 07:36:08.208 [http-nio-8080-exec-1] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 3
+2026-03-04 07:36:08.209 [http-nio-8080-exec-1] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 3
+2026-03-04 07:36:08.215 [http-nio-8080-exec-1] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 3 and SKU: SKU-A1B2C3D4
+2026-03-04 07:36:08.219 [http-nio-8080-exec-1] INFO  com.ostad.product.controller.ProductController - Successfully deleted product with ID: 3
+2026-03-04 07:39:17.033 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04 07:39:17.038 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-04 07:39:17.047 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 07:39:17.052 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-04 07:39:17.117 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 07:39:29.696 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 07:39:29.809 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 7564 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 07:39:29.810 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 07:39:29.812 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 07:39:31.804 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 07:39:31.906 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2026-03-04 07:39:32.878 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 07:39:32.907 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 07:39:32.910 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 07:39:32.911 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 07:39:33.066 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 07:39:33.067 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3078 ms
+2026-03-04 07:39:33.437 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 07:39:33.537 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 07:39:33.600 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 07:39:34.151 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 07:39:34.208 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 07:39:34.697 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 07:39:34.702 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 07:39:34.765 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 07:39:34.819 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 07:39:36.716 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 07:39:36.784 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 07:39:37.365 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 07:39:37.777 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 07:39:37.873 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 07:39:37.897 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 07:39:37.908 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 10.048 seconds (process running for 11.322)
+2026-03-04 07:39:42.559 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04 07:39:42.559 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-04 07:39:42.561 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-04 07:39:42.786 [http-nio-8080-exec-2] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:39:42.797 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:39:42.798 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 07:39:42.989 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 07:39:43.045 [http-nio-8080-exec-2] INFO  com.ostad.product.service.ProductService - Product created with ID: 52 and SKU: SKU-A1B2C3D4
+2026-03-04 07:39:43.097 [http-nio-8080-exec-2] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 52
+2026-03-04 07:39:47.664 [http-nio-8080-exec-3] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:39:47.666 [http-nio-8080-exec-3] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:39:47.666 [http-nio-8080-exec-3] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 07:39:47.672 [http-nio-8080-exec-3] WARN  com.ostad.product.service.ProductService - Duplicate SKU detected: 'SKU-A1B2C3D4'
+2026-03-04 07:39:47.684 [http-nio-8080-exec-3] ERROR c.ostad.product.exception.GlobalExceptionHandler - SKU conflict: A product with SKU 'SKU-A1B2C3D4' already exists.
+2026-03-04 07:39:54.994 [http-nio-8080-exec-4] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 07:39:54.995 [http-nio-8080-exec-4] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 07:39:55.024 [http-nio-8080-exec-4] INFO  com.ostad.product.service.ProductService - Retrieved 1 products
+2026-03-04 07:39:55.024 [http-nio-8080-exec-4] INFO  com.ostad.product.controller.ProductController - Returning 1 products
+2026-03-04 07:40:03.762 [http-nio-8080-exec-6] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 52
+2026-03-04 07:40:03.763 [http-nio-8080-exec-6] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 52
+2026-03-04 07:40:03.781 [http-nio-8080-exec-6] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 52 and SKU: SKU-A1B2C3D4
+2026-03-04 07:40:03.791 [http-nio-8080-exec-6] INFO  com.ostad.product.controller.ProductController - Successfully deleted product with ID: 52
+2026-03-04 07:57:57.507 [http-nio-8080-exec-7] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:57:57.587 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 07:57:57.592 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 07:57:57.845 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 07:57:57.866 [http-nio-8080-exec-7] INFO  com.ostad.product.service.ProductService - Product created with ID: 53 and SKU: SKU-A1B2C3D4
+2026-03-04 07:57:57.903 [http-nio-8080-exec-7] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 53
+2026-03-04 07:58:04.598 [http-nio-8080-exec-9] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/appResponse/products/52.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/appResponse/products/52.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 07:58:20.670 [http-nio-8080-exec-10] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/appResponse/products/53.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/appResponse/products/53.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 07:58:31.339 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04 07:58:31.597 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-04 07:58:31.673 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 07:58:31.759 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-04 07:58:32.406 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 07:58:42.057 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 07:58:42.130 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 16328 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 07:58:42.131 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 07:58:42.132 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 07:58:43.360 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 07:58:43.455 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interface.
+2026-03-04 07:58:44.230 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 07:58:44.252 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 07:58:44.255 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 07:58:44.255 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 07:58:44.355 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 07:58:44.356 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2140 ms
+2026-03-04 07:58:44.676 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 07:58:44.778 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 07:58:44.847 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 07:58:45.321 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 07:58:45.366 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 07:58:45.711 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 07:58:45.713 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 07:58:45.757 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 07:58:45.791 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 07:58:47.297 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 07:58:47.391 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 07:58:47.927 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 07:58:48.371 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 07:58:48.463 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 07:58:48.487 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 07:58:48.498 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 7.252 seconds (process running for 8.536)
+2026-03-04 07:59:00.036 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04 07:59:00.036 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-04 07:59:00.038 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-04 07:59:00.084 [http-nio-8080-exec-2] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/appResponse/products/52.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/appResponse/products/52.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:01:30.923 [http-nio-8080-exec-4] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 52
+2026-03-04 08:01:31.009 [http-nio-8080-exec-4] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 52 for deletion
+2026-03-04 08:01:31.015 [http-nio-8080-exec-4] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 52
+2026-03-04 08:01:38.100 [http-nio-8080-exec-5] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 53
+2026-03-04 08:01:38.152 [http-nio-8080-exec-5] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 53 and SKU: SKU-A1B2C3D4
+2026-03-04 08:01:38.195 [http-nio-8080-exec-5] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No acceptable representation
+org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:368)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:263)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseEntityReturnValueHandler.handleReturnValue(ResponseEntityReturnValueHandler.java:79)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:03:58.423 [http-nio-8080-exec-7] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 53
+2026-03-04 08:03:58.425 [http-nio-8080-exec-7] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 53 for deletion
+2026-03-04 08:03:58.427 [http-nio-8080-exec-7] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 53
+2026-03-04 08:04:01.836 [http-nio-8080-exec-8] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 53
+2026-03-04 08:04:01.839 [http-nio-8080-exec-8] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 53 for deletion
+2026-03-04 08:04:01.842 [http-nio-8080-exec-8] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 53
+2026-03-04 08:04:08.236 [http-nio-8080-exec-9] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 08:04:08.236 [http-nio-8080-exec-9] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 08:04:08.359 [http-nio-8080-exec-9] INFO  com.ostad.product.service.ProductService - Retrieved 0 products
+2026-03-04 08:04:08.360 [http-nio-8080-exec-9] INFO  com.ostad.product.controller.ProductController - Returning 0 products
+2026-03-04 08:04:14.053 [http-nio-8080-exec-10] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:04:14.054 [http-nio-8080-exec-10] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:04:14.055 [http-nio-8080-exec-10] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 08:04:14.088 [http-nio-8080-exec-10] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 08:04:14.106 [http-nio-8080-exec-10] INFO  com.ostad.product.service.ProductService - Product created with ID: 102 and SKU: SKU-A1B2C3D4
+2026-03-04 08:04:14.121 [http-nio-8080-exec-10] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 102
+2026-03-04 08:04:21.366 [http-nio-8080-exec-1] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 53
+2026-03-04 08:04:21.370 [http-nio-8080-exec-1] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 53 for deletion
+2026-03-04 08:04:21.371 [http-nio-8080-exec-1] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 53
+2026-03-04 08:04:26.276 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 102
+2026-03-04 08:04:26.280 [http-nio-8080-exec-2] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 102 and SKU: SKU-A1B2C3D4
+2026-03-04 08:04:26.284 [http-nio-8080-exec-2] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No acceptable representation
+org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:368)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:263)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseEntityReturnValueHandler.handleReturnValue(ResponseEntityReturnValueHandler.java:79)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:04:33.263 [http-nio-8080-exec-4] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 08:04:33.264 [http-nio-8080-exec-4] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 08:04:33.268 [http-nio-8080-exec-4] INFO  com.ostad.product.service.ProductService - Retrieved 0 products
+2026-03-04 08:04:33.269 [http-nio-8080-exec-4] INFO  com.ostad.product.controller.ProductController - Returning 0 products
+2026-03-04 08:05:43.070 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04 08:05:43.077 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-04 08:05:43.083 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:05:43.088 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-04 08:05:43.408 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 08:06:40.101 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 08:06:40.181 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 8068 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 08:06:40.182 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 08:06:40.183 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 08:06:41.458 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 08:06:41.556 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2026-03-04 08:06:42.148 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 08:06:42.164 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:06:42.166 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 08:06:42.166 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 08:06:42.248 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 08:06:42.249 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1979 ms
+2026-03-04 08:06:42.598 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 08:06:42.699 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 08:06:42.778 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 08:06:43.264 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 08:06:43.305 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 08:06:43.657 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 08:06:43.659 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 08:06:43.701 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 08:06:43.737 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 08:06:45.191 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 08:06:45.259 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:06:45.799 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 08:06:46.207 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 08:06:46.315 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:06:46.340 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 08:06:46.352 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 7.11 seconds (process running for 8.262)
+2026-03-04 08:06:53.669 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04 08:06:53.669 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-04 08:06:53.671 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-04 08:06:54.822 [http-nio-8080-exec-1] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:06:54.833 [http-nio-8080-exec-1] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:06:54.837 [http-nio-8080-exec-1] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 08:06:55.182 [http-nio-8080-exec-1] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 08:06:55.231 [http-nio-8080-exec-1] INFO  com.ostad.product.service.ProductService - Product created with ID: 152 and SKU: SKU-A1B2C3D4
+2026-03-04 08:06:55.286 [http-nio-8080-exec-1] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 152
+2026-03-04 08:07:02.315 [http-nio-8080-exec-3] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 102
+2026-03-04 08:07:02.341 [http-nio-8080-exec-3] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 102 for deletion
+2026-03-04 08:07:02.351 [http-nio-8080-exec-3] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 102
+2026-03-04 08:07:08.662 [http-nio-8080-exec-4] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 152
+2026-03-04 08:07:08.674 [http-nio-8080-exec-4] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 152 and SKU: SKU-A1B2C3D4
+2026-03-04 08:08:23.953 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04 08:08:23.958 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-04 08:08:23.963 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:08:23.967 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-04 08:08:24.557 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 08:08:55.691 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 08:08:55.782 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 16820 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 08:08:55.784 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 08:08:55.785 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 08:08:57.378 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 08:08:57.487 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2026-03-04 08:08:58.370 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 08:08:58.398 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:08:58.402 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 08:08:58.402 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 08:08:58.512 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 08:08:58.512 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2606 ms
+2026-03-04 08:08:58.783 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 08:08:58.851 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 08:08:58.901 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 08:08:59.265 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 08:08:59.304 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 08:08:59.612 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 08:08:59.614 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 08:08:59.649 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 08:08:59.682 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 08:09:00.984 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 08:09:01.077 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:09:01.611 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 08:09:01.994 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 08:09:02.087 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:09:02.109 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 08:09:02.119 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 7.777 seconds (process running for 9.125)
+2026-03-04 08:16:20.481 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04 08:16:20.490 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-04 08:16:20.495 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:16:20.498 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-04 08:16:20.930 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 08:16:32.385 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 08:16:32.466 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 7504 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 08:16:32.467 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 08:16:32.468 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 08:16:33.682 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 08:16:33.779 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2026-03-04 08:16:34.458 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 08:16:34.474 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:16:34.476 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 08:16:34.477 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 08:16:34.554 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 08:16:34.555 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2003 ms
+2026-03-04 08:16:34.814 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 08:16:34.907 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 08:16:34.959 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 08:16:35.383 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 08:16:35.431 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 08:16:35.781 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 08:16:35.783 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 08:16:35.828 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 08:16:35.862 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 08:16:37.269 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 08:16:37.382 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:16:37.919 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 08:16:38.307 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 08:16:38.398 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:16:38.421 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 08:16:38.431 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 6.895 seconds (process running for 8.149)
+2026-03-04 08:17:10.082 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04 08:17:10.083 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-04 08:17:10.085 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-04 08:17:10.395 [http-nio-8080-exec-2] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:17:10.409 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:17:10.409 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 08:17:10.666 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 08:17:10.711 [http-nio-8080-exec-2] INFO  com.ostad.product.service.ProductService - Product created with ID: 202 and SKU: SKU-A1B2C3D4
+2026-03-04 08:17:10.762 [http-nio-8080-exec-2] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 202
+2026-03-04 08:17:21.462 [http-nio-8080-exec-3] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 152
+2026-03-04 08:17:21.463 [http-nio-8080-exec-3] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 152
+2026-03-04 08:17:21.489 [http-nio-8080-exec-3] WARN  com.ostad.product.service.ProductService - Failed to find product with ID: 152 for deletion
+2026-03-04 08:17:21.495 [http-nio-8080-exec-3] ERROR c.ostad.product.exception.GlobalExceptionHandler - Product not found: Product not found with ID: 152
+2026-03-04 08:17:26.413 [http-nio-8080-exec-4] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 202
+2026-03-04 08:17:26.414 [http-nio-8080-exec-4] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 202
+2026-03-04 08:17:26.427 [http-nio-8080-exec-4] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 202 and SKU: SKU-A1B2C3D4
+2026-03-04 08:17:26.436 [http-nio-8080-exec-4] INFO  com.ostad.product.controller.ProductController - Successfully deleted product with ID: 202
+2026-03-04 08:19:03.881 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-04 08:19:03.885 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-04 08:19:03.891 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:19:03.895 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-04 08:19:04.367 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-04 08:24:09.785 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-04 08:24:09.870 [main] INFO  com.ostad.product.InventoryApplication - Starting InventoryApplication using Java 21.0.9 with PID 13912 (F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory\target\classes started by Saiful Islam in F:\JavaTraining\Ostad\JavaProjectOstad\Module-14\Product_Inventory)
+2026-03-04 08:24:09.871 [main] DEBUG com.ostad.product.InventoryApplication - Running with Spring Boot v3.5.11, Spring v6.2.16
+2026-03-04 08:24:09.872 [main] INFO  com.ostad.product.InventoryApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-04 08:24:10.997 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-04 08:24:11.079 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2026-03-04 08:24:11.696 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-04 08:24:11.713 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:24:11.716 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-04 08:24:11.716 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-04 08:24:11.792 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-04 08:24:11.792 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1826 ms
+2026-03-04 08:24:12.054 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-04 08:24:12.153 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-04 08:24:12.204 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-04 08:24:12.661 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-04 08:24:12.708 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-04 08:24:13.075 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/productdb user=
+2026-03-04 08:24:13.077 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-04 08:24:13.123 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-04 08:24:13.157 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-04 08:24:14.552 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-04 08:24:14.637 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-04 08:24:15.242 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-04 08:24:15.653 [main] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/productdb'
+2026-03-04 08:24:15.747 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-04 08:24:15.770 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-04 08:24:15.780 [main] INFO  com.ostad.product.InventoryApplication - Started InventoryApplication in 6.898 seconds (process running for 8.127)
+2026-03-04 08:24:47.410 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04 08:24:47.410 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-04 08:24:47.412 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-04 08:24:47.645 [http-nio-8080-exec-2] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:24:47.663 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:24:47.663 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 08:24:47.873 [http-nio-8080-exec-2] DEBUG com.ostad.product.service.ProductService - SKU uniqueness validation passed for: SKU-A1B2C3D4
+2026-03-04 08:24:47.916 [http-nio-8080-exec-2] INFO  com.ostad.product.service.ProductService - Product created with ID: 252 and SKU: SKU-A1B2C3D4
+2026-03-04 08:24:47.964 [http-nio-8080-exec-2] INFO  com.ostad.product.controller.ProductController - Successfully created product with ID: 252
+2026-03-04 08:25:35.730 [http-nio-8080-exec-5] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 08:25:35.730 [http-nio-8080-exec-5] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 08:25:35.761 [http-nio-8080-exec-5] INFO  com.ostad.product.service.ProductService - Retrieved 1 products
+2026-03-04 08:25:35.761 [http-nio-8080-exec-5] INFO  com.ostad.product.controller.ProductController - Returning 1 products
+2026-03-04 08:25:46.330 [http-nio-8080-exec-6] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/products/appResponse/152.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/products/appResponse/152.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:26:14.242 [http-nio-8080-exec-7] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/products/appResponse/152.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/products/appResponse/152.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:26:21.972 [http-nio-8080-exec-9] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/products/appResponse/202.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/products/appResponse/202.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:26:32.157 [http-nio-8080-exec-2] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/products/appResponse/252.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/products/appResponse/252.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:26:41.531 [http-nio-8080-exec-4] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 08:26:41.531 [http-nio-8080-exec-4] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 08:26:41.537 [http-nio-8080-exec-4] INFO  com.ostad.product.service.ProductService - Retrieved 1 products
+2026-03-04 08:26:41.537 [http-nio-8080-exec-4] INFO  com.ostad.product.controller.ProductController - Returning 1 products
+2026-03-04 08:26:46.817 [http-nio-8080-exec-5] DEBUG com.ostad.product.controller.ProductController - Received request to create product: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:26:46.819 [http-nio-8080-exec-5] DEBUG com.ostad.product.service.ProductService - Creating product with data: Product(id=null, name=Wireless Mouse, description=Ergonomic wireless mouse, sku=SKU-A1B2C3D4, price=29.99, quantity=150, status=ACTIVE)
+2026-03-04 08:26:46.819 [http-nio-8080-exec-5] DEBUG com.ostad.product.service.ProductService - SKU format validation passed for: SKU-A1B2C3D4
+2026-03-04 08:26:46.824 [http-nio-8080-exec-5] WARN  com.ostad.product.service.ProductService - Duplicate SKU detected: 'SKU-A1B2C3D4'
+2026-03-04 08:26:46.830 [http-nio-8080-exec-5] ERROR c.ostad.product.exception.GlobalExceptionHandler - SKU conflict: A product with SKU 'SKU-A1B2C3D4' already exists.
+2026-03-04 08:27:01.746 [http-nio-8080-exec-6] DEBUG com.ostad.product.controller.ProductController - Received request to fetch all products
+2026-03-04 08:27:01.747 [http-nio-8080-exec-6] DEBUG com.ostad.product.service.ProductService - Fetching all products
+2026-03-04 08:27:01.753 [http-nio-8080-exec-6] INFO  com.ostad.product.service.ProductService - Retrieved 1 products
+2026-03-04 08:27:01.753 [http-nio-8080-exec-6] INFO  com.ostad.product.controller.ProductController - Returning 1 products
+2026-03-04 08:27:06.566 [http-nio-8080-exec-8] ERROR c.ostad.product.exception.GlobalExceptionHandler - Unexpected error occurred: No static resource api/products/appResponse/252.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/products/appResponse/252.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-04 08:27:25.080 [http-nio-8080-exec-10] DEBUG com.ostad.product.controller.ProductController - Received request to delete product with ID: 252
+2026-03-04 08:27:25.081 [http-nio-8080-exec-10] DEBUG com.ostad.product.service.ProductService - Deleting product with ID: 252
+2026-03-04 08:27:25.102 [http-nio-8080-exec-10] INFO  com.ostad.product.service.ProductService - Product deleted with ID: 252 and SKU: SKU-A1B2C3D4
+2026-03-04 08:27:25.110 [http-nio-8080-exec-10] INFO  com.ostad.product.controller.ProductController - Successfully deleted product with ID: 252

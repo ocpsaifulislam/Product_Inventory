@@ -1,0 +1,417 @@
+package com.inventory;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.inventory.entity.Product;
+import com.inventory.entity.ProductStatus;
+import com.inventory.repository.ProductRepository;
+import org.junit.jupiter.api.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class ProductInventoryApiTests {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Autowired
+    private ProductRepository productRepository;
+
+    @BeforeEach
+    void setUp() {
+        productRepository.deleteAll();
+    }
+
+    private Product createValidProduct() {
+        return Product.builder()
+                .name("Wireless Mouse")
+                .description("Ergonomic wireless mouse with Bluetooth 5.0")
+                .sku("SKU-A1B2C3D4")
+                .price(29.99)
+                .quantity(150)
+                .status(ProductStatus.ACTIVE)
+                .build();
+    }
+
+    // ==================== CREATE TESTS ====================
+
+    @Test
+    @Order(1)
+    @DisplayName("POST /api/products - Create product successfully")
+    void testCreateProduct_Success() throws Exception {
+        Product product = createValidProduct();
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.id").isNotEmpty())
+                .andExpect(jsonPath("$.name").value("Wireless Mouse"))
+                .andExpect(jsonPath("$.sku").value("SKU-A1B2C3D4"))
+                .andExpect(jsonPath("$.price").value(29.99))
+                .andExpect(jsonPath("$.quantity").value(150))
+                .andExpect(jsonPath("$.status").value("ACTIVE"));
+    }
+
+    @Test
+    @Order(2)
+    @DisplayName("POST /api/products - Validation failure: blank name")
+    void testCreateProduct_BlankName() throws Exception {
+        Product product = createValidProduct();
+        product.setName("");
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors.name").value("Product name must not be blank"));
+    }
+
+    @Test
+    @Order(3)
+    @DisplayName("POST /api/products - Validation failure: null price")
+    void testCreateProduct_NullPrice() throws Exception {
+        Product product = createValidProduct();
+        product.setPrice(null);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors.price").value("Price must not be null"));
+    }
+
+    @Test
+    @Order(4)
+    @DisplayName("POST /api/products - Validation failure: negative price")
+    void testCreateProduct_NegativePrice() throws Exception {
+        Product product = createValidProduct();
+        product.setPrice(-10.0);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors.price").value("Price must be a positive number"));
+    }
+
+    @Test
+    @Order(5)
+    @DisplayName("POST /api/products - Validation failure: negative quantity")
+    void testCreateProduct_NegativeQuantity() throws Exception {
+        Product product = createValidProduct();
+        product.setQuantity(-5);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors.quantity").value("Quantity must be zero or more"));
+    }
+
+    @Test
+    @Order(6)
+    @DisplayName("POST /api/products - Validation failure: description too long")
+    void testCreateProduct_DescriptionTooLong() throws Exception {
+        Product product = createValidProduct();
+        product.setDescription("A".repeat(501));
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors.description")
+                        .value("Description must be no longer than 500 characters"));
+    }
+
+    @Test
+    @Order(7)
+    @DisplayName("POST /api/products - Validation failure: null status")
+    void testCreateProduct_NullStatus() throws Exception {
+        Product product = createValidProduct();
+        product.setStatus(null);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors.status").value("Status must not be null"));
+    }
+
+    @Test
+    @Order(8)
+    @DisplayName("POST /api/products - Invalid SKU format")
+    void testCreateProduct_InvalidSkuFormat() throws Exception {
+        Product product = createValidProduct();
+        product.setSku("INVALID-SKU");
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.message", containsString("Invalid SKU format")));
+    }
+
+    @Test
+    @Order(9)
+    @DisplayName("POST /api/products - SKU too short")
+    void testCreateProduct_SkuTooShort() throws Exception {
+        Product product = createValidProduct();
+        product.setSku("SKU-A1B2");
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.message", containsString("Invalid SKU format")));
+    }
+
+    @Test
+    @Order(10)
+    @DisplayName("POST /api/products - Duplicate SKU")
+    void testCreateProduct_DuplicateSku() throws Exception {
+        Product product = createValidProduct();
+
+        // Create first product
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isCreated());
+
+        // Attempt to create duplicate
+        Product duplicate = createValidProduct();
+        duplicate.setName("Another Product");
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(duplicate)))
+                .andExpect(status().isConflict())
+                .andExpect(jsonPath("$.message", containsString("already exists")));
+    }
+
+    // ==================== GET ALL TESTS ====================
+
+    @Test
+    @Order(11)
+    @DisplayName("GET /api/products - Get all products (empty)")
+    void testGetAllProducts_Empty() throws Exception {
+        mockMvc.perform(get("/api/products"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(0)));
+    }
+
+    @Test
+    @Order(12)
+    @DisplayName("GET /api/products - Get all products (with data)")
+    void testGetAllProducts_WithData() throws Exception {
+        // Create two products
+        Product product1 = createValidProduct();
+        productRepository.save(product1);
+
+        Product product2 = Product.builder()
+                .name("Keyboard")
+                .sku("SKU-X9Y8Z7W6")
+                .price(49.99)
+                .quantity(75)
+                .status(ProductStatus.ACTIVE)
+                .build();
+        productRepository.save(product2);
+
+        mockMvc.perform(get("/api/products"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(2)));
+    }
+
+    // ==================== GET BY ID TESTS ====================
+
+    @Test
+    @Order(13)
+    @DisplayName("GET /api/products/{id} - Get product by ID successfully")
+    void testGetProductById_Success() throws Exception {
+        Product product = createValidProduct();
+        Product saved = productRepository.save(product);
+
+        mockMvc.perform(get("/api/products/{id}", saved.getId()))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(saved.getId()))
+                .andExpect(jsonPath("$.name").value("Wireless Mouse"))
+                .andExpect(jsonPath("$.sku").value("SKU-A1B2C3D4"));
+    }
+
+    @Test
+    @Order(14)
+    @DisplayName("GET /api/products/{id} - Product not found")
+    void testGetProductById_NotFound() throws Exception {
+        mockMvc.perform(get("/api/products/{id}", 9999L))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.message", containsString("Product not found")));
+    }
+
+    // ==================== UPDATE TESTS ====================
+
+    @Test
+    @Order(15)
+    @DisplayName("PUT /api/products/{id} - Update product successfully")
+    void testUpdateProduct_Success() throws Exception {
+        Product product = createValidProduct();
+        Product saved = productRepository.save(product);
+
+        Product updated = Product.builder()
+                .name("Updated Wireless Mouse")
+                .description("Updated description")
+                .sku("SKU-A1B2C3D4") // Same SKU
+                .price(39.99)
+                .quantity(200)
+                .status(ProductStatus.INACTIVE)
+                .build();
+
+        mockMvc.perform(put("/api/products/{id}", saved.getId())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(updated)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("Updated Wireless Mouse"))
+                .andExpect(jsonPath("$.price").value(39.99))
+                .andExpect(jsonPath("$.quantity").value(200))
+                .andExpect(jsonPath("$.status").value("INACTIVE"))
+                .andExpect(jsonPath("$.sku").value("SKU-A1B2C3D4"));
+    }
+
+    @Test
+    @Order(16)
+    @DisplayName("PUT /api/products/{id} - Cannot change SKU")
+    void testUpdateProduct_CannotChangeSku() throws Exception {
+        Product product = createValidProduct();
+        Product saved = productRepository.save(product);
+
+        Product updated = Product.builder()
+                .name("Updated Product")
+                .sku("SKU-ZZZZZZZZ") // Different SKU
+                .price(39.99)
+                .quantity(200)
+                .status(ProductStatus.ACTIVE)
+                .build();
+
+        mockMvc.perform(put("/api/products/{id}", saved.getId())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(updated)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.message", containsString("SKU cannot be changed")));
+    }
+
+    @Test
+    @Order(17)
+    @DisplayName("PUT /api/products/{id} - Product not found")
+    void testUpdateProduct_NotFound() throws Exception {
+        Product updated = createValidProduct();
+
+        mockMvc.perform(put("/api/products/{id}", 9999L)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(updated)))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.message", containsString("Product not found")));
+    }
+
+    // ==================== DELETE TESTS ====================
+
+    @Test
+    @Order(18)
+    @DisplayName("DELETE /api/products/{id} - Delete product successfully")
+    void testDeleteProduct_Success() throws Exception {
+        Product product = createValidProduct();
+        Product saved = productRepository.save(product);
+
+        mockMvc.perform(delete("/api/products/{id}", saved.getId()))
+                .andExpect(status().isNoContent());
+
+        // Verify it's deleted
+        mockMvc.perform(get("/api/products/{id}", saved.getId()))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @Order(19)
+    @DisplayName("DELETE /api/products/{id} - Product not found")
+    void testDeleteProduct_NotFound() throws Exception {
+        mockMvc.perform(delete("/api/products/{id}", 9999L))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.message", containsString("Product not found")));
+    }
+
+    // ==================== MULTIPLE VALIDATION ERRORS ====================
+
+    @Test
+    @Order(20)
+    @DisplayName("POST /api/products - Multiple validation errors")
+    void testCreateProduct_MultipleValidationErrors() throws Exception {
+        Product product = Product.builder()
+                .name("")           // blank
+                .sku("")            // blank
+                .price(null)        // null
+                .quantity(null)     // null
+                .status(null)       // null
+                .build();
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.validationErrors").isMap())
+                .andExpect(jsonPath("$.validationErrors", aMapWithSize(greaterThanOrEqualTo(4))));
+    }
+
+    // ==================== EDGE CASE TESTS ====================
+
+    @Test
+    @Order(21)
+    @DisplayName("POST /api/products - Zero quantity is valid")
+    void testCreateProduct_ZeroQuantity() throws Exception {
+        Product product = createValidProduct();
+        product.setQuantity(0);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.quantity").value(0));
+    }
+
+    @Test
+    @Order(22)
+    @DisplayName("POST /api/products - Null description is valid")
+    void testCreateProduct_NullDescription() throws Exception {
+        Product product = createValidProduct();
+        product.setDescription(null);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.name").value("Wireless Mouse"));
+    }
+
+    @Test
+    @Order(23)
+    @DisplayName("POST /api/products - DISCONTINUED status is valid")
+    void testCreateProduct_DiscontinuedStatus() throws Exception {
+        Product product = createValidProduct();
+        product.setStatus(ProductStatus.DISCONTINUED);
+
+        mockMvc.perform(post("/api/products")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(product)))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.status").value("DISCONTINUED"));
+    }
+}

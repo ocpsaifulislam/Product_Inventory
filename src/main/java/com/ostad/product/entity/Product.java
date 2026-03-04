@@ -10,7 +10,6 @@ import lombok.*;
 @AllArgsConstructor
 @Table(name = "products")
 @Builder
-@ToString
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

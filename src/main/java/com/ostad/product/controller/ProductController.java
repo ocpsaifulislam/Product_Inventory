@@ -1,7 +1,9 @@
 package com.ostad.product.controller;
 
+import com.ostad.product.entity.AppResponse;
 import com.ostad.product.entity.Product;
 import com.ostad.product.service.ProductService;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -58,12 +60,22 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
+    public ResponseEntity<AppResponse> deleteProduct(@PathVariable Long id,
+                                                     HttpServletRequest request) {
         log.debug("Received request to delete product with ID: {}", id);
 
         productService.deleteProduct(id);
         log.info("Successfully deleted product with ID: {}", id);
-
-        return ResponseEntity.noContent().build();
+        AppResponse response = new AppResponse(
+                200,
+                null,
+                "Product deleted successfully",
+                request.getRequestURI()
+        );
+//        return ResponseEntity.noContent().build();
+//        return ResponseEntity.ok("Product deleted successfully");
+        return ResponseEntity.ok(response);
     }
+
+
 }
